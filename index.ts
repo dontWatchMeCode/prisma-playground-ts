@@ -10,6 +10,11 @@ const prisma = new PrismaClient({
 
 const fsData = fs.readFileSync('./config/data.txt', 'utf8')
 
+if (!fs.existsSync('./.env')) {
+    console.log('no .env file found, copy .env.exaple')
+    process.exit(1)
+}
+
 console.log('[ config/db started ]')
 run(fsData, prisma)
     .then(() => {
