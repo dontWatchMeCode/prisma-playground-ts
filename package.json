@@ -11,7 +11,8 @@
         "backup": "./utils/backup.sh",
         "remove": "./utils/remove.sh",
         "create": "./utils/create.sh",
-        "update": "npm-check-updates -u && npm install"
+        "update": "npm-check-updates -u && npm install",
+        "studio": "npx prisma studio"
     },
     "nodemonConfig": {
         "restartable": "rs",
